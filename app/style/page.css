@@ -1,0 +1,54 @@
+main {
+    background-color: #252525;
+}
+
+.my-name {
+    font-size: 70px;
+    font-weight: 800;
+    color: #F0EDCF;
+}
+
+.description {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.hero-btn {
+    border-radius: 20px;
+    color: #252525;
+    background-color: #F0EDCF;
+}
+
+.about-me-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #F0EDCF;
+}
+
+.about-me-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+}
+
+.project-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #F0EDCF;
+}
+
+/* .project-text {
+    font-size: 1rem;
+} */
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #F0EDCF;
+}
+
+.contact-btn {
+    border-radius: 20px;
+    color: #252525;
+    background-color: #F0EDCF;
+}
