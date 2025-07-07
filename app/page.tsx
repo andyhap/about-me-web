@@ -79,6 +79,34 @@ export default function Page() {
         <button className="contact-btn btn fw-bold px-4 py-2">
           Say Hello
         </button>
+
+        {/* Social Media Buttons */}
+        <div className="sosmed-button d-flex gap-3 justify-content-center mt-3 py-3">
+          <a
+            href="https://www.instagram.com/andy.hap_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn rounded-circle d-flex align-items-center justify-content-center"
+          >
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/andy-hikmal-p"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn rounded-circle d-flex align-items-center justify-content-center"
+          >
+            <i className="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://github.com/andyhap"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn rounded-circle d-flex align-items-center justify-content-center"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+        </div>
       </section>
     </main>
   );

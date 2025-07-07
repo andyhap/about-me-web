@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/page.css';
 import './globals.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Lato } from "next/font/google";
 
 const lato = Lato({
