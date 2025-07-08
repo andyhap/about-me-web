@@ -3,7 +3,7 @@ import FloatingFab from "./components/fab";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { script } from "framer-motion/client";
+import Image from "next/image";
 export default function Page() {
 
   useEffect(() => {
@@ -62,11 +62,13 @@ export default function Page() {
               </h3>
               {/* gambar project */}
               <div className="bg-dark rounded overflow-hidden mb-3" style={{ aspectRatio: '2 / 1' }}>
-                <img
-                  src="/image/HikmalAir-dashbord.png"
-                  alt="HikmalAir screenshot"
-                  className="w-100 h-100 object-fit-cover"
-                />
+              <Image
+                src="/image/HikmalAir-dashbord.png"
+                alt="HikmalAir screenshot"
+                width={800}
+                height={400}
+                className="w-100 h-100 object-fit-cover rounded"
+              />
               </div>
               <p>HikmalAIr is a flight ticket booking website created to fulfill a college assignment. This application is created using Laravel and integrated with a MySQL database.</p>
               <p><a href="https://hikmalair-production.up.railway.app/login" className="text-decoration-none btn hero-btn">Go to HikmalAir</a></p>
@@ -80,7 +82,7 @@ export default function Page() {
 
       {/* Contact Section */}
       <section data-aos="fade-up" id="Contact" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
-        <h2 className="contact-title display-5 fw-bold mb-4">Let's Talk</h2>
+        <h2 className="contact-title display-5 fw-bold mb-4">Let&apos;s Talk</h2>
         <p className="fs-5 mb-4">
           Want to say hi or get in touch? Feel free to send me an email by
           clicking the button below.
