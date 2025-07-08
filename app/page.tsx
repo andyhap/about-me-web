@@ -42,14 +42,9 @@ export default function Page() {
       <section data-aos="fade-up" id="About" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <h2 className="about-me-title display-5 fw-bold mb-4">About Me</h2>
         <p className="about-me-text fs-5">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          auctor, quam ut pretium molestie, dui nisl fringilla lorem, vel
-          molestie risus sapien a nisi. Cras nec lobortis massa. Pellentesque
-          lacinia varius lacus non consequat. Nulla facilisi. Phasellus
-          vehicula ligula et fringilla egestas. Ut vitae turpis volutpat,
-          egestas ex ac, vehicula ligula. Vestibulum mattis ligula ut ante
-          malesuada suscipit. Aliquam placerat nulla nec ligula elementum
-          ornare id vitae urna.
+          Hello, I am Hikmal and I am a student of Informatics Engineering at the State
+          University of Surabaya. I am interested in making websites and will continue
+          to develop myself to make better websites.
         </p>
       </section>
 
@@ -59,18 +54,20 @@ export default function Page() {
         <div className="row justify-content-center">
           <div className="col-lg-10">
             {/* Kotak abu-abu */}
-            <div className="bg-secondary rounded p-5 mb-4">
+            <div className="bg-project rounded p-5 mb-4">
               <h3 className="text-white fw-semibold fs-4 mb-3">
                 HikmalAir - college project
               </h3>
-              {/* Kotak hitam di dalam kotak abu-abu */}
-              <div className="bg-dark rounded p-4">
-                <p className="text-white mb-0">
-                  Deskripsi singkat atau konten dari proyekmu bisa ditaruh di sini.
-                </p>
+              {/* gambar project */}
+              <div className="bg-dark rounded overflow-hidden mb-3" style={{ aspectRatio: '2 / 1' }}>
+                <img
+                  src="/image/HikmalAir-dashbord.png"
+                  alt="HikmalAir screenshot"
+                  className="w-100 h-100 object-fit-cover"
+                />
               </div>
+              <p><a href="https://hikmalair-production.up.railway.app/login" className="text-decoration-none btn hero-btn">Go to HikmalAir</a></p>
             </div>
-
             <p className="fst-italic fs-5 text-white">
               Upcoming projects will be added soon.
             </p>
@@ -91,7 +88,7 @@ export default function Page() {
         </a>
 
         {/* Social Media Buttons */}
-        <div data-aos="fade-up" className="sosmed-button d-flex gap-3 justify-content-center mt-3 py-3">
+        <div data-aos="fade-up" className="sosmed-btn d-flex gap-3 justify-content-center mt-3 py-3">
           <a
             href="https://www.instagram.com/andy.hap_/"
             target="_blank"
