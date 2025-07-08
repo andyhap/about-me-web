@@ -66,6 +66,10 @@ main {
     line-height: 1.8;
 }
 
+.project-section{
+    padding-top: 10rem;
+}
+
 .project-title {
     font-size: 3rem;
     font-weight: 800;

@@ -1,7 +1,9 @@
 "use client";
+import FloatingFab from "./components/fab";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { script } from "framer-motion/client";
 export default function Page() {
 
   useEffect(() => {
@@ -49,7 +51,7 @@ export default function Page() {
       </section>
 
       {/* Project Section */}
-      <section data-aos="fade-up" id="Project" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <section data-aos="fade-up" id="Project" className="project-section container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <h2 className="project-title display-5 fw-bold mb-5">Project</h2>
         <div className="row justify-content-center">
           <div className="col-lg-10">
@@ -66,6 +68,7 @@ export default function Page() {
                   className="w-100 h-100 object-fit-cover"
                 />
               </div>
+              <p>HikmalAIr is a flight ticket booking website created to fulfill a college assignment. This application is created using Laravel and integrated with a MySQL database.</p>
               <p><a href="https://hikmalair-production.up.railway.app/login" className="text-decoration-none btn hero-btn">Go to HikmalAir</a></p>
             </div>
             <p className="fst-italic fs-5 text-white">
@@ -115,6 +118,7 @@ export default function Page() {
           </a>
         </div>
       </section>
+    <FloatingFab />
     </main>
   );
 }
