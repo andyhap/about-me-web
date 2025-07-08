@@ -1,13 +1,22 @@
 "use client";
-import React from "react";
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 export default function Page() {
-  const navigationButtons = ["About Me", "Project", "Contact"];
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
+  const navigationButtons = ["About", "Project", "Contact"];
 
   return (
     <main className="text-white min-vh-100">
       {/* Hero Section */}
-      <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <section  data-aos="fade-up" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <h1 className="my-name fw-bold mb-4">
           Andy Hikmal Parakkasi
         </h1>
@@ -18,18 +27,19 @@ export default function Page() {
 
         <div className="d-flex justify-content-center gap-3 flex-wrap mb-5">
           {navigationButtons.map((label, idx) => (
-            <button
+            <a
               key={idx}
+              href={`#${label.replace(/\s+/g, '')}`}
               className="hero-btn btn fw-bold px-4 py-2"
             >
               {label}
-            </button>
+            </a>
           ))}
         </div>
       </section>
 
       {/* About Me */}
-      <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <section data-aos="fade-up" id="About" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <h2 className="about-me-title display-5 fw-bold mb-4">About Me</h2>
         <p className="about-me-text fs-5">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -44,7 +54,7 @@ export default function Page() {
       </section>
 
       {/* Project Section */}
-      <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <section data-aos="fade-up" id="Project" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <h2 className="project-title display-5 fw-bold mb-5">Project</h2>
         <div className="row justify-content-center">
           <div className="col-lg-10">
@@ -69,19 +79,19 @@ export default function Page() {
       </section>
 
       {/* Contact Section */}
-      <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <section data-aos="fade-up" id="Contact" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <h2 className="contact-title display-5 fw-bold mb-4">Let's Talk</h2>
         <p className="fs-5 mb-4">
           Want to say hi or get in touch? Feel free to send me an email by
           clicking the button below.
         </p>
 
-        <button className="contact-btn btn fw-bold px-4 py-2">
+        <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="contact-btn btn fw-bold px-4 py-2">
           Say Hello
-        </button>
+        </a>
 
         {/* Social Media Buttons */}
-        <div className="sosmed-button d-flex gap-3 justify-content-center mt-3 py-3">
+        <div data-aos="fade-up" className="sosmed-button d-flex gap-3 justify-content-center mt-3 py-3">
           <a
             href="https://www.instagram.com/andy.hap_/"
             target="_blank"

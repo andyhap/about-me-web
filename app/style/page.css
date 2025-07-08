@@ -15,9 +15,44 @@ main {
 }
 
 .hero-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 20px;
     color: #252525;
     background-color: #F0EDCF;
+    padding: 0.5rem 1.5rem;
+    z-index: 1;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    outline: none !important;
+}
+
+.hero-btn::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #f0edcf;
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    filter: brightness(85%);
+}
+
+.hero-btn:hover {
+    transform: translateY(-2px);
+}
+
+.hero-btn:hover::after {
+    opacity: 1;
 }
 
 .about-me-title {
@@ -37,10 +72,6 @@ main {
     color: #F0EDCF;
 }
 
-/* .project-text {
-    font-size: 1rem;
-} */
-
 .contact-title {
     font-size: 3rem;
     font-weight: 800;
@@ -58,4 +89,9 @@ main {
     height: 50px;
     font-size: 27px;
     background-color: #F0EDCF;
+}
+
+/* Smooth scrolling untuk navigation */
+html {
+    scroll-behavior: smooth;
 }
