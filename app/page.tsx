@@ -1,9 +1,11 @@
 "use client";
+
 import FloatingFab from "./components/fab";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Image from "next/image";
+
 export default function Page() {
 
   useEffect(() => {
@@ -13,7 +15,7 @@ export default function Page() {
     });
   }, []);
 
-  const navigationButtons = ["About", "Project", "Contact"];
+  const navigationButtons = ["About", "Experience","Project", "Contact"];
 
   return (
     <main className="text-white min-vh-100">
@@ -47,12 +49,53 @@ export default function Page() {
         <div data-aos="fade-up">
         <h2 className="about-me-title display-5 fw-bold mb-4">About Me</h2>
         <p className="about-me-text fs-5">
-          Hello, I am Hikmal and I am a student of Informatics Engineering at the State
-          University of Surabaya. I am interested in making websites and will continue
+          Hello, I am Hikmal and I am a student of Informatics Engineering at the State<br/>
+          University of Surabaya. I am interested in making websites and will continue<br/>
           to develop myself to make better websites.
         </p>
         </div>
       </section>
+
+      {/* Experience Section */}
+      <section id="Experience" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <div data-aos="fade-up">
+          <h2 className="experience-title display-5 fw-bold mb-4">Experience</h2>
+          <div className="row w-100">
+            {/* Kiri: Judul */}
+            <div className="col-md-5 d-flex align-items-start justify-content-center mb-4 mb-md-0">
+              <h3 className="fw-bold text-md-start text-center">
+                Organizational <br/> Experience
+              </h3>
+            </div>
+
+            {/* Kanan: Semua kotak pengalaman */}
+            <div className="col-md-7 d-flex flex-column gap-4">
+              {/* Pengalaman 1 */}
+              <div className="organization-card p-4 rounded">
+                <h5 className="text-white fw-semibold mb-1">Head of the media and information department</h5>
+                <p className="text-light mb-2">Himpunan Mahasiswa Bontang Surabaya | 2025-Present</p>
+                <p className="text-white mb-0">
+                  Lead the team in creating designs and content for social media and <br/>
+                  event documentation,Coordinate with other departments to ensure <br/>
+                  effective information delivery, Manage the organization's content <br/>
+                  calendar and visual identity
+                </p>
+              </div>
+
+              {/* Pengalaman 2 */}
+              <div className="organization-card p-4 rounded">
+                <h5 className="text-white fw-semibold mb-1">Member of the Department of Media and Information</h5>
+                <p className="text-light mb-2">Himpunan Mahasiswa Bontang Surabaya | 2024</p>
+                <p className="text-white mb-0">
+                  Assist in content creation and documentation of activities. Participate<br/>
+                  in the poster editing and design process.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* Project Section */}
       <section id="Project" className="project-section container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
@@ -95,7 +138,7 @@ export default function Page() {
           clicking the button below.
         </p>
 
-        <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="contact-btn btn fw-bold px-4 py-2">
+        <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="hero-btn contact-btn btn fw-bold px-4 py-2">
           Say Hello
         </a>
         

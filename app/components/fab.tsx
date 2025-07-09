@@ -48,6 +48,7 @@ export default function FloatingFab() {
                 }}
             >
                 <a href="#About" className="fab-menu-btn" onClick={() => setOpen(false)}>About</a>
+                <a href="#Experience" className="fab-menu-btn" onClick={() => setOpen(false)}>Experience</a>
                 <a href="#Project" className="fab-menu-btn" onClick={() => setOpen(false)}>Project</a>
                 <a href="#Contact" className="fab-menu-btn" onClick={() => setOpen(false)}>Contact</a>
             </div>

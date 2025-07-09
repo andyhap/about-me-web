@@ -66,8 +66,22 @@ main {
     line-height: 1.8;
 }
 
+.experience-title{
+    font-size: 3rem;
+    font-weight: 800;
+    color: #F0EDCF;
+}
+
+.organization-card{
+    background-color: #252525;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform 0.3s ease;
+}
+
 .project-section{
-    padding-top: 10rem;
+    padding-top: 8rem;
 }
 
 .project-title {
