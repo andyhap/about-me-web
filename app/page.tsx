@@ -77,7 +77,7 @@ export default function Page() {
                 <p className="text-white mb-0">
                   Lead the team in creating designs and content for social media and <br/>
                   event documentation,Coordinate with other departments to ensure <br/>
-                  effective information delivery, Manage the organization's content <br/>
+                  effective information delivery, Manage the organization&apos;s content <br/>
                   calendar and visual identity
                 </p>
               </div>
