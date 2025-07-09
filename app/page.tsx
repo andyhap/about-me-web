@@ -18,7 +18,8 @@ export default function Page() {
   return (
     <main className="text-white min-vh-100">
       {/* Hero Section */}
-      <section  data-aos="fade-up" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <div data-aos="fade-up">
         <h1 className="my-name fw-bold mb-4">
           Andy Hikmal Parakkasi
         </h1>
@@ -38,20 +39,24 @@ export default function Page() {
             </a>
           ))}
         </div>
+        </div>
       </section>
 
       {/* About Me */}
-      <section data-aos="fade-up" id="About" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <section id="About" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <div data-aos="fade-up">
         <h2 className="about-me-title display-5 fw-bold mb-4">About Me</h2>
         <p className="about-me-text fs-5">
           Hello, I am Hikmal and I am a student of Informatics Engineering at the State
           University of Surabaya. I am interested in making websites and will continue
           to develop myself to make better websites.
         </p>
+        </div>
       </section>
 
       {/* Project Section */}
-      <section data-aos="fade-up" id="Project" className="project-section container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <section id="Project" className="project-section container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <div data-aos="fade-up">
         <h2 className="project-title display-5 fw-bold mb-5">Project</h2>
         <div className="row justify-content-center">
           <div className="col-lg-10">
@@ -78,10 +83,12 @@ export default function Page() {
             </p>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Contact Section */}
-      <section data-aos="fade-up" id="Contact" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <section id="Contact" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <div data-aos="fade-up">
         <h2 className="contact-title display-5 fw-bold mb-4">Let&apos;s Talk</h2>
         <p className="fs-5 mb-4">
           Want to say hi or get in touch? Feel free to send me an email by
@@ -91,9 +98,10 @@ export default function Page() {
         <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="contact-btn btn fw-bold px-4 py-2">
           Say Hello
         </a>
+        
 
         {/* Social Media Buttons */}
-        <div data-aos="fade-up" className="sosmed-btn d-flex gap-3 justify-content-center mt-3 py-3">
+        <div className="sosmed-btn d-flex gap-3 justify-content-center mt-3 py-3">
           <a
             href="https://www.instagram.com/andy.hap_/"
             target="_blank"
@@ -118,6 +126,7 @@ export default function Page() {
           >
             <i className="fab fa-github"></i>
           </a>
+        </div>
         </div>
       </section>
     <FloatingFab />
