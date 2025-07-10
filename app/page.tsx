@@ -22,25 +22,29 @@ export default function Page() {
       {/* Hero Section */}
       <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <div data-aos="fade-up">
-        <h1 className="my-name fw-bold mb-4">
-          Andy Hikmal Parakkasi
-        </h1>
-        <p className="description lead mb-4">
-          Hi, my name is Hikmal. I am someone who is interested in the field of
-          website creation.
-        </p>
+          <div className="splice-layered my-name display-5 fw-bold mb-4">
+              <span className="splice-stroke">Andy Hikmal Parakkasi</span>
+              <span className="splice-fill">Andy Hikmal Parakkasi</span>
+          </div>
+          {/* <h1 className="my-name fw-bold mb-4">
+            Andy Hikmal Parakkasi
+          </h1> */}
+          <p className="description lead mb-4">
+            Hi, my name is Hikmal. I am someone who is interested in the field of
+            website creation.
+          </p>
 
-        <div className="d-flex justify-content-center gap-3 flex-wrap mb-5">
-          {navigationButtons.map((label, idx) => (
-            <a
-              key={idx}
-              href={`#${label.replace(/\s+/g, '')}`}
-              className="hero-btn btn fw-bold px-4 py-2"
-            >
-              {label}
-            </a>
-          ))}
-        </div>
+          <div className="d-flex justify-content-center gap-3 flex-wrap mb-5">
+            {navigationButtons.map((label, idx) => (
+              <a
+                key={idx}
+                href={`#${label.replace(/\s+/g, '')}`}
+                className="hero-btn btn fw-bold px-4 py-2"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
