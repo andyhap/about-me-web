@@ -36,10 +36,31 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 }
 
-.about-me-title {
+/* .about-me-title {
     font-size: 3rem;
     font-weight: 800;
     color: #F0EDCF;
+} */
+
+.splice-layered {
+    position: relative;
+    display: inline-block;
+}
+
+.splice-stroke {
+    position: absolute;
+    top: -2;
+    left: -2;
+    color: transparent;
+    -webkit-text-stroke: 1.8px #F0EDCF;
+    z-index: 2;
+}
+
+.splice-fill {
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    position: relative;
+    /* text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .about-me-text {
@@ -47,11 +68,11 @@ main {
     line-height: 1.8;
 }
 
-.experience-title{
+/* .experience-title{
     font-size: 3rem;
     font-weight: 800;
     color: #F0EDCF;
-}
+} */
 
 .organization-card{
     background-color: #252525;
@@ -65,11 +86,11 @@ main {
     padding-top: 8rem;
 }
 
-.project-title {
+/* .project-title {
     font-size: 3rem;
     font-weight: 800;
     color: #F0EDCF;
-}
+} */
 
 .bg-project {
     background-color: #252525;
@@ -83,11 +104,11 @@ main {
     color: #252525;
 }
 
-.contact-title {
+/* .contact-title {
     font-size: 3rem;
     font-weight: 800;
     color: #F0EDCF;
-}
+} */
 
 .contact-btn {
     border-radius: 20px;
