@@ -1,6 +1,7 @@
 "use client";
 
 import FloatingFab from "./components/fab";
+import SideNav from "./components/sidenav";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -19,6 +20,9 @@ export default function Page() {
 
   return (
     <main className="text-white min-vh-100">
+      <div className="sidenav-container">
+        <SideNav />
+      </div>
       {/* Hero Section */}
       <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <div data-aos="fade-up">
@@ -192,7 +196,9 @@ export default function Page() {
           </div>
         </div>
       </section>
-    <FloatingFab />
+      <div className="fab-container">
+        <FloatingFab />
+      </div>
     </main>
   );
 }

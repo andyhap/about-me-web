@@ -2,6 +2,29 @@ main {
     background-color: #252525;
 }
 
+/* Default: hidden di desktop */
+.fab-container {
+    display: none;
+}
+
+.sidenav-container {
+    display: flex;
+}
+
+/* Hanya tampil di layar kecil (mobile) */
+@media (max-width: 768px) {
+    .fab-container {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    .sidenav-container {
+        display: none;
+    }
+}
+
 .my-name {
     font-size: 70px;
     font-weight: 800;
