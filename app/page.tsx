@@ -167,7 +167,7 @@ export default function Page() {
               Say Hello
             </a>
 
-            <a href="/" className="hero-btn contact-btn btn fw-bold px-4 py-2">
+            <a className="hero-btn contact-btn btn fw-bold px-4 py-2">
               Download My Resume
             </a>
           </div>
