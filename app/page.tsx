@@ -161,15 +161,16 @@ export default function Page() {
             Want to say hi or get in touch? Feel free to send me an email by
             clicking the button below.
           </p>
-
-          <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="hero-btn contact-btn btn fw-bold px-4 py-2">
-            Say Hello
-          </a>
-
-          <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="hero-btn contact-btn btn fw-bold px-4 py-2">
-            Download My Resume
-          </a>
           
+          <div className="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="hero-btn contact-btn btn fw-bold px-4 py-2">
+              Say Hello
+            </a>
+
+            <a href="/" className="hero-btn contact-btn btn fw-bold px-4 py-2">
+              Download My Resume
+            </a>
+          </div>
 
           {/* Social Media Buttons */}
           <div className="sosmed-btn d-flex gap-3 justify-content-center mt-3 py-3">

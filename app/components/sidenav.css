@@ -11,7 +11,9 @@
     position: absolute;
     left: 2px;
     width: 2px;
-    height: 40rem;
+    /* height: 80rem; */
+    height: 19rem;
+    /* margin-top: -20rem; */
     background: rgba(255, 255, 255, 0.4);
 }
 
