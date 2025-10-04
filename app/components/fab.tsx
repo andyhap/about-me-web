@@ -7,7 +7,7 @@ export default function FloatingFab() {
 
     const { x, y, refs, strategy } = useFloating({
         middleware: [offset(10), shift(), flip()],
-        placement: 'left', 
+        placement: 'top', 
         whileElementsMounted: autoUpdate,
     });
 
@@ -38,13 +38,14 @@ export default function FloatingFab() {
                     left: x ?? 0,
                     zIndex: 999,
                     opacity: open ? 1 : 0,
-                    transform: open ? 'translateX(0)' : 'translateX(10px)',
+                    transform: open ? 'translateY(0px)' : 'translateY(10px)',
                     transition: 'opacity 0.3s ease, transform 0.3s ease',
                     pointerEvents: open ? 'auto' : 'none',
                     display: 'flex',
-                    alignItems: 'center',
-                    flexDirection: 'row',
+                    alignItems: 'flex-end',
+                    flexDirection: 'column',
                     gap: '8px',
+                    marginLeft: '-18px',
                 }}
             >
                 <a href="#About" className="fab-menu-btn" onClick={() => setOpen(false)}>About</a>

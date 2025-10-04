@@ -76,7 +76,7 @@ export default function Page() {
               <span className="splice-fill">Experience</span>
           </div>
           {/* <h2 className="experience-title display-5 fw-bold mb-4">Experience</h2> */}
-          <div className="row w-100">
+          <div className="row w-100 text-center text-md-start">
             {/* Kiri: Judul */}
             <div className="col-md-5 d-flex align-items-start justify-content-center mb-4 mb-md-0">
               <h3 className="fw-bold text-md-start text-center">
@@ -164,6 +164,10 @@ export default function Page() {
 
           <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="hero-btn contact-btn btn fw-bold px-4 py-2">
             Say Hello
+          </a>
+
+          <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="hero-btn contact-btn btn fw-bold px-4 py-2">
+            Download My Resume
           </a>
           
 

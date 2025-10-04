@@ -12,7 +12,7 @@ main {
 }
 
 /* Hanya tampil di layar kecil (mobile) */
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
     .fab-container {
         display: block;
         position: fixed;
@@ -22,6 +22,11 @@ main {
     }
     .sidenav-container {
         display: none;
+    }
+    .my-name {
+        font-size: 40px;
+        font-weight: 400;
+        color: #F0EDCF;
     }
 }
 
