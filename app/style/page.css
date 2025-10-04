@@ -23,11 +23,6 @@ main {
     .sidenav-container {
         display: none;
     }
-    .my-name {
-        font-size: 40px;
-        font-weight: 400;
-        color: #F0EDCF;
-    }
 }
 
 .my-name {
@@ -73,6 +68,7 @@ main {
 .splice-layered {
     position: relative;
     display: inline-block;
+    font-size: 80px;
 }
 
 .splice-stroke {
