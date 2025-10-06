@@ -9,38 +9,7 @@ import Image from "next/image";
 
 export default function Page() {
 
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const setVh = () => {
-      document.documentElement.style.setProperty(
-        "--vh",
-        `${window.innerHeight * 0.01}px`
-      );
-    };
-    setVh();
-    window.addEventListener("resize", setVh);
-
-    const timer = setTimeout(() => {
-      AOS.init({
-        duration: 1000,
-        once: false,
-      });
-      AOS.refresh();
-    }, 300);
-
-    setTimeout(() => {
-      if (window.location.hash) {
-        window.history.replaceState(null, "", window.location.pathname);
-        window.scrollTo(0, 0);
-      }
-    }, 350);
-
-    return () => {
-      window.removeEventListener("resize", setVh);
-      clearTimeout(timer);
-    };
-  }, []);
+  useEffect(() => { AOS.init({ duration: 1000, once: false, }); }, []);
 
   const navigationButtons = ["About", "Experience", "Project", "Contact"];
 

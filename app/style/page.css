@@ -13,7 +13,7 @@ main {
 .splice-layered-name{
     position: relative;
     display: inline-block;
-    font-size: 90px;
+    font-size: 90px !important;
 }
 
 .description {
