@@ -2,7 +2,6 @@ main {
     background-color: #252525;
 }
 
-/* Default: hidden di desktop */
 .fab-container {
     display: none;
 }
@@ -11,24 +10,10 @@ main {
     display: flex;
 }
 
-/* Hanya tampil di layar kecil (mobile) */
-@media (max-width: 1400px) {
-    .fab-container {
-        display: block;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-    }
-    .sidenav-container {
-        display: none;
-    }
-}
-
-.my-name {
-    font-size: 70px;
-    font-weight: 800;
-    color: #F0EDCF;
+.splice-layered-name{
+    position: relative;
+    display: inline-block;
+    font-size: 90px;
 }
 
 .description {
@@ -37,7 +22,7 @@ main {
     font-weight: 100;
 }
 
-.hero-btn {
+.custom-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -52,23 +37,17 @@ main {
     transition: all 0.2s ease;
 }
 
-.hero-btn:hover {
+.custom-btn:hover {
     transform: scale(1.07);
     background-color: #F0EDCF;
     color: #252525;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 }
 
-/* .about-me-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #F0EDCF;
-} */
-
 .splice-layered {
     position: relative;
     display: inline-block;
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .splice-stroke {
@@ -84,19 +63,12 @@ main {
     color: rgb(255, 255, 255);
     z-index: 1;
     position: relative;
-    /* text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .about-me-text {
     font-size: 1.125rem;
     line-height: 1.8;
 }
-
-/* .experience-title{
-    font-size: 3rem;
-    font-weight: 800;
-    color: #F0EDCF;
-} */
 
 .organization-card{
     background-color: #252525;
@@ -111,12 +83,6 @@ main {
     padding-top: 8rem;
 }
 
-/* .project-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #F0EDCF;
-} */
-
 .bg-project {
     background-color: #252525;
     padding: 2rem;
@@ -128,12 +94,6 @@ main {
     background-color: #F0EDCF;
     color: #252525;
 }
-
-/* .contact-title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #F0EDCF;
-} */
 
 .contact-btn {
     border-radius: 20px;
@@ -153,7 +113,33 @@ main {
     color: #F0EDCF;
 }
 
-/* Smooth scrolling untuk navigation */
 html {
     scroll-behavior: smooth;
+}
+
+/* tampilan mobile */
+@media (max-width: 1400px) {
+    .fab-container {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    .sidenav-container {
+        display: none;
+    }
+}
+
+@media (max-width: 782px) {
+    .splice-layered-name{
+        position: relative;
+        display: inline-block;
+        font-size: 55px;
+    }
+    .splice-layered{
+        position: relative;
+        display: inline-block;
+        font-size: 55px;
+    }
 }

@@ -10,13 +10,39 @@ import Image from "next/image";
 export default function Page() {
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: false,
-    });
+    if (typeof window === "undefined") return;
+
+    const setVh = () => {
+      document.documentElement.style.setProperty(
+        "--vh",
+        `${window.innerHeight * 0.01}px`
+      );
+    };
+    setVh();
+    window.addEventListener("resize", setVh);
+
+    const timer = setTimeout(() => {
+      AOS.init({
+        duration: 1000,
+        once: false,
+      });
+      AOS.refresh();
+    }, 300);
+
+    setTimeout(() => {
+      if (window.location.hash) {
+        window.history.replaceState(null, "", window.location.pathname);
+        window.scrollTo(0, 0);
+      }
+    }, 350);
+
+    return () => {
+      window.removeEventListener("resize", setVh);
+      clearTimeout(timer);
+    };
   }, []);
 
-  const navigationButtons = ["About", "Experience","Project", "Contact"];
+  const navigationButtons = ["About", "Experience", "Project", "Contact"];
 
   return (
     <main className="text-white min-vh-100">
@@ -24,9 +50,9 @@ export default function Page() {
         <SideNav />
       </div>
       {/* Hero Section */}
-      <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100 pt-5">
         <div data-aos="fade-up">
-          <div className="splice-layered my-name display-5 fw-bold mb-4">
+          <div className="splice-layered-name my-name display-5 fw-bold mb-4">
               <span className="splice-stroke">Andy Hikmal Parakkasi</span>
               <span className="splice-fill">Andy Hikmal Parakkasi</span>
           </div>
@@ -38,12 +64,12 @@ export default function Page() {
             website creation.
           </p>
 
-          <div className="d-flex justify-content-center gap-3 flex-wrap mb-5">
+          <div className="hero-container d-flex justify-content-center gap-3 flex-wrap mb-5">
             {navigationButtons.map((label, idx) => (
               <a
                 key={idx}
                 href={`#${label.replace(/\s+/g, '')}`}
-                className="hero-btn btn fw-bold px-4 py-2"
+                className="custom-btn btn fw-bold px-4 py-2"
               >
                 {label}
               </a>
@@ -65,6 +91,7 @@ export default function Page() {
             University of Surabaya. I am interested in making websites and will continue<br/>
             to develop myself to make better websites.
           </p>
+          <a href="" className="btn custom-btn">More About Me</a>
         </div>
       </section>
 
@@ -139,7 +166,7 @@ export default function Page() {
                 />
                 </div>
                 <p>HikmalAIr is a flight ticket booking website created to fulfill a college assignment. This application is created using Laravel and integrated with a MySQL database.</p>
-                <p><a href="https://hikmalair-production.up.railway.app/login" className="text-decoration-none btn hero-btn">Go to HikmalAir</a></p>
+                <p><a href="https://hikmalair-production.up.railway.app/login" className="text-decoration-none btn custom-btn">Go to HikmalAir</a></p>
               </div>
               <p className="fst-italic fs-5 text-white">
                 Upcoming projects will be added soon.
@@ -163,11 +190,11 @@ export default function Page() {
           </p>
           
           <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="hero-btn contact-btn btn fw-bold px-4 py-2">
+            <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="custom-btn contact-btn btn fw-bold px-4 py-2">
               Say Hello
             </a>
 
-            <a className="hero-btn contact-btn btn fw-bold px-4 py-2">
+            <a className="custom-btn contact-btn btn fw-bold px-4 py-2">
               Download My Resume
             </a>
           </div>

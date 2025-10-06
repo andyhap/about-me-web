@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import "./sidenav.css"; // Import CSS for the SideNav
+import "./sidenav.css";
 
 const sections = ["About", "Experience", "Project", "Contact"];
 
