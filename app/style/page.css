@@ -13,7 +13,40 @@ main {
 .splice-layered-name{
     position: relative;
     display: inline-block;
-    font-size: 90px !important;
+    font-size: 90px;
+}
+
+.splice-layered {
+    position: relative;
+    display: inline-block;
+    font-size: 60px;
+}
+
+/* tampilan mobile */
+@media (max-width: 1400px) {
+    .fab-container {
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    .sidenav-container {
+        display: none;
+    }
+}
+
+@media (max-width: 782px) {
+    .splice-layered-name{
+        position: relative;
+        display: inline-block;
+        font-size: 55px;
+    }
+    .splice-layered{
+        position: relative;
+        display: inline-block;
+        font-size: 55px;
+    }
 }
 
 .description {
@@ -42,12 +75,6 @@ main {
     background-color: #F0EDCF;
     color: #252525;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
-}
-
-.splice-layered {
-    position: relative;
-    display: inline-block;
-    font-size: 60px;
 }
 
 .splice-stroke {
@@ -117,29 +144,3 @@ html {
     scroll-behavior: smooth;
 }
 
-/* tampilan mobile */
-@media (max-width: 1400px) {
-    .fab-container {
-        display: block;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        z-index: 1000;
-    }
-    .sidenav-container {
-        display: none;
-    }
-}
-
-@media (max-width: 782px) {
-    .splice-layered-name{
-        position: relative;
-        display: inline-block;
-        font-size: 55px;
-    }
-    .splice-layered{
-        position: relative;
-        display: inline-block;
-        font-size: 55px;
-    }
-}

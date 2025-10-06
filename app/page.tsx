@@ -21,13 +21,10 @@ export default function Page() {
       {/* Hero Section */}
       <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100 pt-5">
         <div data-aos="fade-up">
-          <div className="splice-layered-name my-name display-5 fw-bold mb-4">
+          <div className="splice-layered-name fw-bold display-5 mb-4">
               <span className="splice-stroke">Andy Hikmal Parakkasi</span>
               <span className="splice-fill">Andy Hikmal Parakkasi</span>
           </div>
-          {/* <h1 className="my-name fw-bold mb-4">
-            Andy Hikmal Parakkasi
-          </h1> */}
           <p className="description lead mb-4">
             Hi, my name is Hikmal. I am someone who is interested in the field of
             website creation.
@@ -50,11 +47,10 @@ export default function Page() {
       {/* About Me */}
       <section id="About" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <div data-aos="fade-up">
-          <div className="splice-layered display-5 fw-bold mb-4">
+          <div className="splice-layered fw-bold mb-4">
               <span className="splice-stroke">About Me</span>
               <span className="splice-fill">About Me</span>
           </div>
-          {/* <h2 className="about-me-title display-5 fw-bold mb-4">About Me</h2> */}
           <p className="about-me-text fs-5">
             Hello, I am Hikmal and I am a student of Informatics Engineering at the State<br/>
             University of Surabaya. I am interested in making websites and will continue<br/>
@@ -71,7 +67,6 @@ export default function Page() {
               <span className="splice-stroke">Experience</span>
               <span className="splice-fill">Experience</span>
           </div>
-          {/* <h2 className="experience-title display-5 fw-bold mb-4">Experience</h2> */}
           <div className="row w-100 text-center text-md-start">
             {/* Kiri: Judul */}
             <div className="col-md-5 d-flex align-items-start justify-content-center mb-4 mb-md-0">
@@ -80,7 +75,6 @@ export default function Page() {
               </h3>
             </div>
 
-            {/* Kanan: Semua kotak pengalaman */}
             <div className="col-md-7 d-flex flex-column gap-4">
               {/* Pengalaman 1 */}
               <div className="organization-card p-4 rounded">
@@ -116,7 +110,6 @@ export default function Page() {
               <span className="splice-stroke">Project</span>
               <span className="splice-fill">Project</span>
           </div>
-          {/* <h2 className="project-title display-5 fw-bold mb-5">Project</h2> */}
           <div className="row justify-content-center">
             <div className="col-lg-10">
               {/* Kotak abu-abu */}
@@ -152,7 +145,6 @@ export default function Page() {
               <span className="splice-stroke">Let&apos;s Talk</span>
               <span className="splice-fill">Let&apos;s Talk</span>
           </div>
-          {/* <h2 className="contact-title display-5 fw-bold mb-4">Let&apos;s Talk</h2> */}
           <p className="fs-5 mb-4">
             Want to say hi or get in touch? Feel free to send me an email by
             clicking the button below.
