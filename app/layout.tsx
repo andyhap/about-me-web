@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './globals.css';
 import './style/page.css';
 import './style/header.css';
-import './globals.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Lato } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next"

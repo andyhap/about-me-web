@@ -57,7 +57,7 @@ export default function Header() {
                     <span className="navbar-toggler-icon" />
                 </button>
             </div>
-
+            
             {/* Fullscreen Mobile Menu */}
             {menuOpen && (
                 <div className="fullscreen-menu d-lg-none">

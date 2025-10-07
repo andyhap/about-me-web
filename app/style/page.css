@@ -14,12 +14,31 @@ main {
     position: relative;
     display: inline-block;
     font-size: 90px;
+    font-weight: bold;
+    line-height: 5rem;
 }
 
 .splice-layered {
     position: relative;
     display: inline-block;
     font-size: 60px;
+    font-weight: bold;
+    line-height: 4rem;
+}
+
+.splice-stroke {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    color: transparent;
+    -webkit-text-stroke: 1.8px #F0EDCF;
+    z-index: 2;
+}
+
+.splice-fill {
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    position: relative;
 }
 
 /* tampilan mobile */
@@ -45,7 +64,7 @@ main {
     .splice-layered{
         position: relative;
         display: inline-block;
-        font-size: 55px;
+        font-size: 40px;
     }
 }
 
@@ -59,15 +78,15 @@ main {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    color: #252525;
-    background-color: #F0EDCF;
+    border-radius: 20px !important;
+    color: #252525 !important ;
+    background-color: #F0EDCF !important;
     padding: 0.5rem 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
 }
 
 .custom-btn:hover {
@@ -77,24 +96,10 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 }
 
-.splice-stroke {
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    color: transparent;
-    -webkit-text-stroke: 1.8px #F0EDCF;
-    z-index: 2;
-}
-
-.splice-fill {
-    color: rgb(255, 255, 255);
-    z-index: 1;
-    position: relative;
-}
-
 .about-me-text {
     font-size: 1.125rem;
     line-height: 1.8;
+    padding-bottom: 15px;
 }
 
 .organization-card{

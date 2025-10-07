@@ -9,7 +9,27 @@ import Image from "next/image";
 
 export default function Page() {
 
-  useEffect(() => { AOS.init({ duration: 1000, once: false, }); }, []);
+  useEffect(() => {
+    // Scroll ke atas DULU sebelum yang lain (paling prioritas)
+    if (typeof window !== "undefined") {
+      // Langsung scroll ke atas tanpa animasi
+      window.scrollTo(0, 0);
+      
+      // Hapus hash dari URL jika ada
+      if (window.location.hash) {
+        // Gunakan setTimeout minimal untuk memastikan scroll selesai dulu
+        setTimeout(() => {
+          window.history.replaceState(null, "", window.location.pathname);
+        }, 0);
+      }
+    }
+
+    // Baru init AOS setelah scroll selesai
+    AOS.init({ 
+      duration: 1000, 
+      once: false,
+    });
+  }, []);
 
   const navigationButtons = ["About", "Experience", "Project", "Contact"];
 
@@ -21,7 +41,7 @@ export default function Page() {
       {/* Hero Section */}
       <section className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100 pt-5">
         <div data-aos="fade-up">
-          <div className="splice-layered-name fw-bold display-5 mb-4">
+          <div className="splice-layered-name mb-4">
               <span className="splice-stroke">Andy Hikmal Parakkasi</span>
               <span className="splice-fill">Andy Hikmal Parakkasi</span>
           </div>
@@ -47,7 +67,7 @@ export default function Page() {
       {/* About Me */}
       <section id="About" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <div data-aos="fade-up">
-          <div className="splice-layered fw-bold mb-4">
+          <div className="splice-layered mb-4">
               <span className="splice-stroke">About Me</span>
               <span className="splice-fill">About Me</span>
           </div>
@@ -63,19 +83,19 @@ export default function Page() {
       {/* Experience Section */}
       <section id="Experience" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <div data-aos="fade-up">
-          <div className="splice-layered display-5 fw-bold mb-4">
+          <div className="splice-layered fw-bold mb-4">
               <span className="splice-stroke">Experience</span>
               <span className="splice-fill">Experience</span>
           </div>
           <div className="row w-100 text-center text-md-start">
             {/* Kiri: Judul */}
             <div className="col-md-5 d-flex align-items-start justify-content-center mb-4 mb-md-0">
-              <h3 className="fw-bold text-md-start text-center">
+              <h3 className="fw-bold text-md-start text-center ps-3">
                 Organizational <br/> Experience
               </h3>
             </div>
 
-            <div className="col-md-7 d-flex flex-column gap-4">
+            <div className="col-md-7 d-flex flex-column gap-4 line">
               {/* Pengalaman 1 */}
               <div className="organization-card p-4 rounded">
                 <h5 className="text-white fw-semibold mb-1">Head of the media and information department</h5>
@@ -106,7 +126,7 @@ export default function Page() {
       {/* Project Section */}
       <section id="Project" className="project-section container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <div data-aos="fade-up">
-          <div className="splice-layered display-5 fw-bold mb-4">
+          <div className="splice-layered mb-4">
               <span className="splice-stroke">Project</span>
               <span className="splice-fill">Project</span>
           </div>
@@ -141,7 +161,7 @@ export default function Page() {
       {/* Contact Section */}
       <section id="Contact" className="container text-center d-flex flex-column justify-content-center align-items-center min-vh-100">
         <div data-aos="fade-up">
-          <div className="splice-layered display-5 fw-bold mb-4">
+          <div className="splice-layered mb-4">
               <span className="splice-stroke">Let&apos;s Talk</span>
               <span className="splice-fill">Let&apos;s Talk</span>
           </div>

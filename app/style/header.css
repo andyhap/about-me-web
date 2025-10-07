@@ -5,6 +5,9 @@
     font-size: 1.19rem;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     z-index: 999;
+    width: 100%; /* Pastikan navbar full width */
+    left: 0;
+    right: 0;
 }
 
 .my-name-navbar {
@@ -42,13 +45,14 @@
     border: none;
     z-index: 1100;
     margin-right: -10px;
+    position: relative;
 }
 
 .navbar-toggler:focus,
 .navbar-toggler:active {
     outline: none;
     box-shadow: none;
-}
+    }
 
 .navbar-toggler-icon {
     display: inline-block;
@@ -59,10 +63,19 @@
     background-repeat: no-repeat;
 }
 
+/* Container di dalam navbar */
+.div-header {
+    position: relative;
+    z-index: 1001;
+}
+
 /* Fullscreen header mobile menu */
 .fullscreen-menu {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: black;
     display: flex;
     justify-content: center;
