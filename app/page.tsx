@@ -144,7 +144,7 @@ export default function Page() {
                 <div className="bg-dark rounded overflow-hidden mb-3" style={{ aspectRatio: '2 / 1' }}>
                 <Image
                   src="/image/HikmalAir-dashbord.png"
-                  alt="HikmalAir screenshot"
+                  alt="HikmalAir Homepage"
                   width={800}
                   height={400}
                   className="w-100 h-100 object-fit-cover rounded"

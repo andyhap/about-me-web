@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 
 const AboutMe = () => {
     useEffect(() => {
@@ -18,11 +19,13 @@ const AboutMe = () => {
                 <div className="row align-items-center g-4 flex-column flex-md-row">
                     {/* foto */}
                     <div className="col-md-5 text-center mb-4 mb-md-0">
-                        <img
+                        <Image
                             src="/image/diriku.jpg"
                             alt="Foto Profil"
-                            className="img-fluid rounded"
-                            style={{ maxWidth: "400px", borderRadius: "12px" }}
+                            width={400}
+                            height={900}
+                            className="Image-fluid profile rounded"
+                            style={{ maxWidth: "400px", borderRadius: "20px" }}
                         />
                     </div>
 
@@ -35,12 +38,12 @@ const AboutMe = () => {
                         <div className="mb-4 about-me-text">
                             <p>
                                 Hi! My name is Andy Hikmal Parakkasi, but you can call me Hikmal.
-                                I'm deeply interested in the world of programming, especially in web development.
+                                I&apos;m deeply interested in the world of programming, especially in web development.
                                 I constantly strive to learn and improve myself in building better and more
                                 efficient websites to enhance the user experience.
                             </p>
                             <p>
-                                I aspire to become a Full-Stack Web Developer, as I've always been fascinated since
+                                I aspire to become a Full-Stack Web Developer, as I&apos;ve always been fascinated since
                                 childhood by how websites are built and function behind the scenes. In my free time,
                                 I enjoy photography and design, which I usually do to relax or explore creativity
                                 outside of playing games and watching videos.
@@ -64,61 +67,64 @@ const AboutMe = () => {
                         <span className="splice-fill">Toolbox</span>
                     </div>
 
-                    <div className="row row-cols-1 row-cols-md-2 g-">
+                    <div className="row row-cols-1 row-cols-md-2 g-4 mb-4">
                         {/* Bahasa Pemrograman */}
                         <div className="mb-5">
                             <h4 className="mb-3">Programming language</h4>
-                            <div className="d-flex justify-content-center">
-                                <img
-                                src="https://skillicons.dev/icons?i=html,css,js,ts,php"
-                                alt="Bahasa Pemrograman"
-                                />
+                            <div className="d-flex justify-content-center gap-2">
+                                <Image width={40} height={40} src="/image/programming-language/html.svg" alt="HTML icon" />
+                                <Image width={40} height={40} src="/image/programming-language/css.svg" alt="CSS icon" />
+                                <Image width={40} height={40} src="/image/programming-language/javascript.svg" alt="JavaScript icon" />
+                                <Image width={40} height={40} src="/image/programming-language/typescript.svg" alt="TypeScript icon" />                                
+                                <Image width={40} height={40} src="/image/programming-language/php-dark.svg" alt="PHP icon" />
+                                <Image width={40} height={40} src="/image/programming-language/python-dark.svg" alt="Python icon" />                                
                             </div>
                         </div>
 
                         {/* Framework & Library */}
                         <div className="mb-5">
                             <h4 className="mb-3">Framework & Library</h4>
-                            <div className="d-flex justify-content-center">
-                                <img
-                                src="https://skillicons.dev/icons?i=react,nextjs,nodejs,laravel,bootstrap"
-                                alt="Framework & Library"
-                                />
+                            <div className="d-flex justify-content-center gap-2">
+                                <Image width={40} height={40}src="/image/framework-and-library/react-dark.svg" alt="React icon" />
+                                <Image width={40} height={40} src="/image/framework-and-library/nodejs-dark.svg" alt="NodeJS icon" />                                 
+                                <Image width={40} height={40} src="/image/framework-and-library/laravel-dark.svg" alt="Laravel icon" /> 
+                                <Image width={40} height={40} src="/image/framework-and-library/nextjs-dark.svg" alt="NextJS icon" />
+                                <Image width={40} height={40} src="/image/framework-and-library/bootstrap.svg" alt="Boothstrap icon" />                                    
                             </div>
                         </div>
                     </div>
 
-                    <div className="row row-cols-1 row-cols-md-2 g-4">
-                        {/* Database */}
+                    <div className="row row-cols-1 row-cols-md-3 g-4">
+                    {/* Database */}
                         <div className="mb-5">
                             <h4 className="mb-3">Database</h4>
-                            <div className="d-flex justify-content-center">
-                                <img
-                                src="https://skillicons.dev/icons?i=mongodb,mysql,postgres"
-                                alt="Database"
-                                />
-                        </div>
+                            <div className="d-flex justify-content-center flex-wrap gap-3">
+                            <Image width={40} height={40} src="/image/database/mysql-dark.svg" alt="MySQL icon" />
+                            <Image width={40} height={40} src="/image/database/postgresql-dark.svg" alt="PostgreSQL icon" />
+                            <Image width={40} height={40} src="/image/database/mongodb.svg" alt="MongoDB icon" />
+                            </div>
                         </div>
 
                         {/* Tools & Platforms */}
                         <div className="mb-5">
                             <h4 className="mb-3">Tools & Platforms</h4>
-                            <div className="d-flex justify-content-center">
-                                <img
-                                src="https://skillicons.dev/icons?i=git,github,notion"
-                                alt="Tools & Platforms"
-                                />
+                            <div className="d-flex justify-content-center flex-wrap gap-3">
+                            <Image width={40} height={40} src="/image/tools-platforms/git.svg" alt="Git icon" />
+                            <Image width={40} height={40} src="/image/tools-platforms/github-dark.svg" alt="GitHub icon" />
+                            <Image width={40} height={40} src="/image/tools-platforms/gitlab-dark.svg" alt="GitLab icon" />
+                            <Image width={40} height={40} src="/image/tools-platforms/postman.svg" alt="Postman icon" />
+                            <Image width={40} height={40} src="/image/tools-platforms/notion-dark.svg" alt="Notion icon" />
                             </div>
                         </div>
-                    </div>
-                    {/* Design */}
-                    <div className="mb-5">
-                        <h4 className="mb-3">Design Tools</h4>
-                        <div className="d-flex justify-content-center">
-                            <img
-                            src="https://skillicons.dev/icons?i=figma,photoshop,pr"
-                            alt="Design Tools"
-                            />
+
+                        {/* Design Tools */}
+                        <div className="mb-5">
+                            <h4 className="mb-3">Design Tools</h4>
+                            <div className="d-flex justify-content-center flex-wrap gap-3">
+                            <Image width={40} height={40} src="/image/design/figma-dark.svg" alt="Figma icon" />
+                            <Image width={40} height={40} src="/image/design/photoshop.svg" alt="Photoshop icon" />
+                            <Image width={40} height={40} src="/image/design/premiere.svg" alt="Premiere Pro icon" />
+                            </div>
                         </div>
                     </div>
                 </div>

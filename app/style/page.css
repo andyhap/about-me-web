@@ -41,6 +41,12 @@ main {
     position: relative;
 }
 
+.toolbox-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
 /* tampilan mobile */
 @media (max-width: 1400px) {
     .fab-container {
@@ -75,6 +81,11 @@ main {
     .about-me-text {
         font-size: 0.95rem;
         line-height: 1.6;
+    }
+    .profile{
+        max-width: 300px !important;
+        padding-top: 7.5rem;
+        padding-left: 4.5rem;
     }
 }
 
