@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import FloatingFab from "./components/fab";
 import SideNav from "./components/sidenav";
 import React, { useEffect } from "react";
@@ -76,7 +77,9 @@ export default function Page() {
             University of Surabaya. I am interested in making websites and will continue<br/>
             to develop myself to make better websites.
           </p>
-          <a href="" className="btn custom-btn">More About Me</a>
+          <Link href="/about-me" className="btn custom-btn">
+            More About Me
+          </Link>
         </div>
       </section>
 
@@ -173,10 +176,6 @@ export default function Page() {
           <div className="d-flex justify-content-center gap-3 flex-wrap">
             <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=andyhikmalparakkasi@gmail.com" className="custom-btn contact-btn btn fw-bold px-4 py-2">
               Say Hello
-            </a>
-
-            <a className="custom-btn contact-btn btn fw-bold px-4 py-2">
-              Download My Resume
             </a>
           </div>
 

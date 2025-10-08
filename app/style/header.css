@@ -20,15 +20,48 @@
     color: #fff;
     text-decoration: none;
     font-weight: 500;
+    cursor: pointer;
     transition: color 0.2s ease;
 }
 
-.nav-link:hover {
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -1px;
+    right: 0%;
+    background-color: #F0EDCF;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
+.nav-link.active-page:hover::after {
+    width: 0%;
+}
+
+.nav-link:active{
     color: #F0EDCF;
 }
 
 .active-page {
     border-bottom: 2px solid #F0EDCF;
+}
+
+.nav-link.active-page {
+    color: #F0EDCF;
+    border-bottom: 2px solid #F0EDCF;
+    pointer-events: none;
+}
+
+.nav-link.active-page::after,
+.nav-link.active-page:hover::after,
+.nav-link.active-page:focus::after {
+    display: none !important;
 }
 
 .navbar-transparent {

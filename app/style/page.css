@@ -66,6 +66,16 @@ main {
         display: inline-block;
         font-size: 40px;
     }
+    img.img-fluid {
+        width: 80%;
+        max-width: 250px;
+        padding-top: 8rem;
+        padding-left: 4.5rem;
+    }
+    .about-me-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 }
 
 .description {

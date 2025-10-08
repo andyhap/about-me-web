@@ -1,6 +1,8 @@
 const MyHobyPage = () => {
     return (
-        <p>my hobby</p>
+        <main className="text-white min-vh-100 d-flex justify-content-center align-items-center">
+            <h1>My Hobby</h1>
+        </main>
     )
 }
 
