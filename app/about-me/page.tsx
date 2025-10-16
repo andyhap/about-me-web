@@ -128,18 +128,18 @@ const AboutMe = () => {
                     </div>
 
                     <div className="row row-cols-1 row-cols-md-3 g-4">
-                        {/* Database */}
+                        {/* db-img */}
                         <div className="mb-5">
                             <h4 className="mb-3">Database</h4>
                             <div className="d-flex justify-content-center flex-wrap gap-3">
                                 <div data-aos="fade-right" data-aos-delay="0">
-                                    <Image width={40} height={40} src="/image/database/mysql-dark.svg" alt="MySQL icon" />
+                                    <Image width={40} height={40} src="/image/db-img/mysql-dark.svg" alt="MySQL icon" />
                                 </div>
                                 <div data-aos="fade-right" data-aos-delay="100">
-                                    <Image width={40} height={40} src="/image/database/postgresql-dark.svg" alt="PostgreSQL icon" />
+                                    <Image width={40} height={40} src="/image/db-img/postgresql-dark.svg" alt="PostgreSQL icon" />
                                 </div>
                                 <div data-aos="fade-right" data-aos-delay="200">
-                                    <Image width={40} height={40} src="/image/database/mongodb.svg" alt="MongoDB icon" />
+                                    <Image width={40} height={40} src="/image/db-img/mongodb.svg" alt="MongoDB icon" />
                                 </div>
                             </div>
                         </div>
