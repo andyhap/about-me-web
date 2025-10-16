@@ -11,21 +11,16 @@ import Image from "next/image";
 export default function Page() {
 
   useEffect(() => {
-    // Scroll ke atas DULU sebelum yang lain (paling prioritas)
     if (typeof window !== "undefined") {
-      // Langsung scroll ke atas tanpa animasi
       window.scrollTo(0, 0);
       
-      // Hapus hash dari URL jika ada
       if (window.location.hash) {
-        // Gunakan setTimeout minimal untuk memastikan scroll selesai dulu
         setTimeout(() => {
           window.history.replaceState(null, "", window.location.pathname);
         }, 0);
       }
     }
 
-    // Baru init AOS setelah scroll selesai
     AOS.init({ 
       duration: 1000, 
       once: false,

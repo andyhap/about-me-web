@@ -47,6 +47,18 @@ main {
     align-items: stretch;
 }
 
+.profile-image-container {
+    display: inline-block;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
 /* tampilan mobile */
 @media (max-width: 1400px) {
     .fab-container {
@@ -82,12 +94,14 @@ main {
         font-size: 0.95rem;
         line-height: 1.6;
     }
-    .profile{
+    .profile-image{
         max-width: 300px !important;
-        padding-top: 7.5rem;
-        padding-left: 4.5rem;
+        padding-top: 10rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
+
 
 .description {
     font-size: 20px;

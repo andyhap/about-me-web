@@ -12,7 +12,7 @@ export default function Header() {
     const navItems = [
         { href: '/', label: 'Home' },
         { href: '/about-me', label: 'About Me' },
-        { href: '/my-hobby', label: 'My Hobby' },
+        // { href: '/my-hobby', label: 'My Hobby' },
     ];
 
     useEffect(() => {
